@@ -1,6 +1,8 @@
 import pytest
 from banking import BankingApp
 
+
+
 def test_initial_balance():
     app = BankingApp(150.0)
     assert app.check_balance() == 150.0
