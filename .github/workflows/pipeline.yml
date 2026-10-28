@@ -54,11 +54,3 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/simple-banking-app:${{ github.sha }}
-
-
-git init
-git add .
-git commit -m "Push 1: Implement balance checking and deposits"
-git branch -M main
-git remote add origin https://github.com
-git push -u origin main
