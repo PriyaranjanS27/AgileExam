@@ -1,14 +1,11 @@
 name: Student Banking CI/CD Pipeline
-
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-
 permissions:
   contents: read
-
 jobs:
   test:
     name: Checkout and Test
@@ -54,13 +51,3 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/simple-banking-app:${{ github.sha }}
-
-
-          # Force-stage all updated project configuration parameters
-git add .
-
-# Commit your engineering pipeline adjustments
-git commit -m "ci: execute direct main branch push to unlock secrets validation"
-
-# Push directly to the main branch tracking stream
-git push origin main

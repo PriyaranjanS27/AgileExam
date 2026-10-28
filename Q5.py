@@ -1,5 +1,4 @@
 import sys
-
 class BankingApp:
     def __init__(self, initial_balance=0.0):
         self.balance = initial_balance
@@ -20,7 +19,6 @@ class BankingApp:
             return False, "Insufficient balance."
         self.balance -= amount
         return True, f"Successfully withdrew ${amount:.2f}"
-
 def main():
     app = BankingApp(100.0)
     print("--- Welcome to the Simple Banking Application ---")
@@ -53,6 +51,5 @@ def main():
             sys.exit(0)
         else:
             print("Invalid selection. Please choose an option between 1 and 4.")
-
 if __name__ == '__main__':
     main()
